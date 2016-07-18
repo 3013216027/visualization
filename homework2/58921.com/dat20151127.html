@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>电影票房数据库</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/misc/images/favicon.ico" type="image/x-icon" />
+<link rel="bookmark" href="/misc/images/favicon.ico"/>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/movie/files/cache/css_js/1fa74c2b45e6d54e3ebe3038e7d5e7dd.css?1429958372" />
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var Dida = {cache: {}, module: {system: {},user: {},block: {},weibo: {},solr: {},robots: {},pp: {},page: {},og: {},msearch: {},movie_screen: {},movie_ask: {},movie: {},mobile: {},message: {},highcharts: {},film_og: {},film_name: {},film_field: {},film_brand: {},film_block: {},film_article: {},film: {},field: {},editor: {},content: {},comment: {},bsearch: {},boxoffice: {},banned: {},api: {}},settings: { "cache_css_and_js_timestamp": 1429958372, "base_theme": "/sites/all/movie/themes/filmt", "base_ui_theme": "bootstrap", "base_path": "/", "language_code": "zh-hans", "clean_url": true, "user_is_login": false }}
+//--><!]]>
+</script>
+<script type="text/javascript" src="/sites/all/movie/files/cache/css_js/09ad79966b4726ac6b384ae2f68c6c3d.js?1429958372"></script>
+</head>
+<body class="user_is_anonymous page_wrapper_front">
+
+<div id="header" class="navbar navbar-inverse" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dida-site-menu-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" title="电影票房数据库" class="logo navbar-brand">
+        <img src="/sites/all/movie/files/cache/themes/filmt_logo.png" alt="" title="电影票房数据库" />
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="dida-site-menu-navbar-collapse" role="navigation">
+      <ul class="site_menu nav navbar-nav"><li class="site_menu_list site_menu_list_front site_menu_list_index_1 first"><a href="/" title="首页" class="active">首页</a></li>
+<li class="site_menu_list site_menu_list_system_topic site_menu_list_index_2"><a href="/group/boxoffice" title="电影票房话题">票房话题</a></li>
+<li class="site_menu_list site_menu_list_system_top site_menu_list_index_3"><a href="/alltime" title="内地电影票房总排行榜">票房排行榜</a></li>
+<li class="site_menu_list site_menu_list_movie_live site_menu_list_index_4"><a href="/boxoffice/wangpiao/20151127" title="实时票房">实时票房</a><ul class="site_menu_children dropdown-menu"><li class="site_menu_list site_menu_list_0 site_menu_list_index_sub_1 first"><a href="/boxoffice/wangpiao" title="网票票房实时统计">网票票房实时统计</a></li>
+<li class="site_menu_list site_menu_list_1 site_menu_list_index_sub_2"><a href="/boxoffice/hipiao" title="哈票票房实时统计">哈票票房实时统计</a></li>
+<li class="site_menu_list site_menu_list_2 site_menu_list_index_sub_3"><a href="/boxoffice/gewara" title="格瓦拉票房实时统计">格瓦拉票房实时统计</a></li>
+<li class="site_menu_list site_menu_list_3 site_menu_list_index_sub_4"><a href="/boxoffice/wanda" title="万达票房实时统计">万达票房实时统计</a></li>
+<li class="site_menu_list site_menu_list_4 site_menu_list_index_sub_5"><a href="/boxoffice/jinyi" title="金逸票房实时统计">金逸票房实时统计</a></li>
+<li class="site_menu_list site_menu_list_5 site_menu_list_index_sub_6 last"><a href="/boxoffice/tpiao" title="淘电影票房实时统计">淘电影票房实时统计</a></li>
+</ul>
+</li>
+<li class="site_menu_list site_menu_list_movie_schedule site_menu_list_index_5"><a href="/schedule" title="电影排片">电影排片</a><ul class="site_menu_children dropdown-menu"><li class="site_menu_list site_menu_list_0 site_menu_list_index_sub_1 first"><a href="/boxoffice/wangpiao/schedule/20151127" title="网票排片">网票排片</a></li>
+<li class="site_menu_list site_menu_list_1 site_menu_list_index_sub_2"><a href="/boxoffice/hipiao/schedule/20151127" title="哈票排片">哈票排片</a></li>
+<li class="site_menu_list site_menu_list_2 site_menu_list_index_sub_3"><a href="/boxoffice/gewara/schedule/20151127" title="格瓦拉排片">格瓦拉排片</a></li>
+<li class="site_menu_list site_menu_list_3 site_menu_list_index_sub_4"><a href="/boxoffice/wanda/schedule/20151127" title="万达排片">万达排片</a></li>
+<li class="site_menu_list site_menu_list_4 site_menu_list_index_sub_5"><a href="/boxoffice/jinyi/schedule/20151127" title="金逸排片">金逸排片</a></li>
+<li class="site_menu_list site_menu_list_5 site_menu_list_index_sub_6 last"><a href="/boxoffice/tpiao/schedule/20151127" title="淘电影排片">淘电影排片</a></li>
+</ul>
+</li>
+<li class="site_menu_list site_menu_list_login site_menu_list_index_6"><a href="/user/login" title="登录">登录</a><ul class="site_menu_children dropdown-menu"><li class="site_menu_list site_menu_list_1 site_menu_list_index_sub_1 first"><a href="/user/register" title="注册">注册</a></li>
+<li class="site_menu_list site_menu_list_0 site_menu_list_index_sub_2"><a href="/user/login" title="登录">登录</a></li>
+<li class="site_menu_list site_menu_list_2 site_menu_list_index_sub_3 last"><a href="/user/pass" title="找回密码">找回密码</a></li>
+</ul>
+</li>
+<li class="site_menu_list site_menu_list_register site_menu_list_index_7 last"><a href="/user/register" title="注册">注册</a></li>
+</ul>
+          </div>
+  </div>
+</div>
+
+
+
+<div id="main" class="container"> 
+  <div class="row">
+    
+
+    <div id="content" class="col-md-19">
+                  
+                  <style>
+.front_block {
+  margin-bottom: 8px;
+}
+</style>
+
+<div id="box_office_live" class="clearfix front_block">
+  <ul class="nav nav-tabs">
+    <li><a data-toggle="tab" href="#box_office_live_summary" class="active">概况</a></li>
+    <li><a href="/boxoffice/wangpiao" title="网票统计">网票</a></li>
+    <li><a href="/boxoffice/wanda" title="万达票房统计">万达</a></li>
+    <li><a href="/boxoffice/hipiao" title="哈票统计">哈票</a></li>
+    <li><a href="/boxoffice/jinyi" title="金逸票房统计">金逸</a></li>
+    <li><a href="/boxoffice/tpiao" title="淘票统计">淘票</a></li>
+    <li><a data-toggle="tab" href="#box_office_live_good">黄金时段</a></li>
+  </ul>
+    <div class="tab-content">
+    <div id="box_office_live_good" class="tab-pane"><div class="table-responsive"><table class="center_table table table-bordered table-condensed">
+<thead><tr><th>电影名称</th><th colspan="3">网票</th><th colspan="3">哈票</th><th colspan="3">万达</th><th colspan="3">金逸</th><th colspan="2">合计</th></tr></thead><tbody>
+ <tr class="odd"><td>------</td><td>场次</td><td>总座位</td><td>上座率</td><td>场次</td><td>总座位</td><td>上座率</td><td>场次</td><td>总座位</td><td>上座率</td><td>场次</td><td>总座位</td><td>上座率</td><td>场次</td><td>总座位</td> </tr>
+ <tr class="even"><td><a href="/film/5040/boxoffice" title="火星救援">火星救援</a></td><td>7996</td><td>147.94万</td><td>28.42%</td><td>1101</td><td>15.9万</td><td>55.93%</td><td>1270</td><td>28.65万</td><td>39.47%</td><td>633</td><td>13.41万</td><td>30.89%</td><td>11000</td><td>2059064</td> </tr>
+ <tr class="odd"><td><a href="/film/5012/boxoffice" title="消失的凶手">消失的凶手</a></td><td>4048</td><td>53.45万</td><td>25.34%</td><td>489</td><td>5.9万</td><td>76.26%</td><td>278</td><td>3.9万</td><td>41.52%</td><td>342</td><td>4.94万</td><td>37.01%</td><td>5157</td><td>681861</td> </tr>
+ <tr class="even"><td><a href="/film/5084/boxoffice" title="我的少女时代">我的少女时</a></td><td>3848</td><td>49.84万</td><td>34.96%</td><td>631</td><td>8.37万</td><td>55.47%</td><td>626</td><td>9.18万</td><td>44.56%</td><td>241</td><td>3.44万</td><td>42.61%</td><td>5346</td><td>708301</td> </tr>
+ <tr class="odd"><td><a href="/film/4925/boxoffice" title="坏蛋必须死">坏蛋必须死</a></td><td>2690</td><td>32.15万</td><td>19.53%</td><td>203</td><td>2.37万</td><td>33.8%</td><td>448</td><td>5.66万</td><td>30.25%</td><td>157</td><td>1.97万</td><td>21.77%</td><td>3498</td><td>421471</td> </tr>
+ <tr class="even"><td><a href="/film/4824/boxoffice" title="诡影迷情">诡影迷情</a></td><td>1175</td><td>13.63万</td><td>1.12%</td><td>219</td><td>2.59万</td><td>9.68%</td><td>93</td><td>1.32万</td><td>6.38%</td><td>119</td><td>1.58万</td><td>6.87%</td><td>1606</td><td>191163</td> </tr>
+ <tr class="odd"><td><a href="/film/5066/boxoffice" title="玩命速递：重启之战">玩命速递：</a></td><td>1191</td><td>14.87万</td><td>12.36%</td><td>96</td><td>1.11万</td><td>35.01%</td><td>390</td><td>5.38万</td><td>24.22%</td><td>56</td><td>8159</td><td>11.78%</td><td>1733</td><td>221700</td> </tr>
+ <tr class="even"><td><a href="/film/5031/boxoffice" title="007：幽灵党">007：幽</a></td><td>814</td><td>9.47万</td><td>18.91%</td><td>18</td><td>2106</td><td>30.15%</td><td>266</td><td>2.56万</td><td>30.93%</td><td>56</td><td>6224</td><td>26.77%</td><td>1154</td><td>128633</td> </tr>
+ <tr class="odd"><td><a href="/film/3986/boxoffice" title="饥饿游戏3：嘲笑鸟（下）">饥饿游戏3</a></td><td>794</td><td>9.53万</td><td>15.53%</td><td>23</td><td>2553</td><td>27.03%</td><td>320</td><td>3.94万</td><td>18.83%</td><td>68</td><td>9166</td><td>19.43%</td><td>1205</td><td>146471</td> </tr>
+ <tr class="even"><td><a href="/film/5077/boxoffice" title="十月初五的月光">十月初五的</a></td><td>372</td><td>5.11万</td><td>25.69%</td><td>88</td><td>1.49万</td><td>50.59%</td><td>27</td><td>3956</td><td>32.79%</td><td>41</td><td>4762</td><td>30.6%</td><td>528</td><td>74788</td> </tr>
+ <tr class="odd"><td><a href="/film/4965/boxoffice" title="灵臆事件">灵臆事件</a></td><td>86</td><td>9731</td><td>3.77%</td><td>5</td><td>549</td><td>21.68%</td><td>1</td><td>115</td><td>1.74%</td><td>2</td><td>320</td><td>--</td><td>94</td><td>10715</td> </tr>
+ <tr class="even"><td class="right" colspan="16"><span class="form_description">19点-22点为黄金时段</span></td> </tr>
+</tbody>
+</table>
+</div></div><div id="box_office_live_summary" class="tab-pane active"><div class="table-responsive"><table class="table table table-bordered table-condensed">
+<thead><tr><th>电影名称</th><th>总场次/占比</th><th>网票票房</th><th>哈票票房</th><th>万达票房</th><th>金逸票房</th><th>实时</th><th>预计</th><th>累积</th></tr></thead><tbody>
+ <tr class="odd"><td><a href="/film/5040/boxoffice" title="火星救援">火星救援</a></td><td>4.36万/30.1%</td><td>3279.23万</td><td>919.49万</td><td>1430.04万</td><td>259.44万</td><td>5607.03万</td><td>6622.5万</td><td>9133万</td> </tr>
+ <tr class="even"><td><a href="/film/5012/boxoffice" title="消失的凶手">消失的凶手</a></td><td>2.25万/15.5%</td><td>1089.74万</td><td>414.56万</td><td>324.03万</td><td>149.48万</td><td>3208.92万</td><td>3777.64万</td><td>--</td> </tr>
+ <tr class="odd"><td><a href="/film/5084/boxoffice" title="我的少女时代">我的少女时</a></td><td>2.17万/15%</td><td>1252.31万</td><td>406.65万</td><td>437.44万</td><td>87.99万</td><td>2041.42万</td><td>2372.05万</td><td>1.75亿</td> </tr>
+ <tr class="even"><td><a href="/film/4925/boxoffice" title="坏蛋必须死">坏蛋必须死</a></td><td>2.01万/13.9%</td><td>588.17万</td><td>205.54万</td><td>176.86万</td><td>32.21万</td><td>968.58万</td><td>1126.13万</td><td>--</td> </tr>
+ <tr class="odd"><td><a href="/film/5066/boxoffice" title="玩命速递：重启之战">玩命速递：</a></td><td>1.13万/7.8%</td><td>237.79万</td><td>126.38万</td><td>164.52万</td><td>12.24万</td><td>528.38万</td><td>617.22万</td><td>1.01亿</td> </tr>
+ <tr class="even"><td><a href="/film/3986/boxoffice" title="饥饿游戏3：嘲笑鸟（下）">饥饿游戏3</a></td><td>6814/4.7%</td><td>207.9万</td><td>27.76万</td><td>108.71万</td><td>18.87万</td><td>306.22万</td><td>351.1万</td><td>1.26亿</td> </tr>
+ <tr class="odd"><td><a href="/film/5031/boxoffice" title="007：幽灵党">007：幽</a></td><td>6359/4.4%</td><td>186.56万</td><td>24.01万</td><td>82.73万</td><td>10.53万</td><td>292.58万</td><td>338.34万</td><td>5.18亿</td> </tr>
+ <tr class="even"><td><a href="/film/4824/boxoffice" title="诡影迷情">诡影迷情</a></td><td>3664/2.5%</td><td>37.7万</td><td>2.91万</td><td>2.73万</td><td>1509.00</td><td>63.96万</td><td>147.4万</td><td>--</td> </tr>
+ <tr class="odd"><td><a href="/film/5077/boxoffice" title="十月初五的月光">十月初五的</a></td><td>2373/1.6%</td><td>93.59万</td><td>69.79万</td><td>9.07万</td><td>9.02万</td><td>112.2万</td><td>131.81万</td><td>3330万</td> </tr>
+ <tr class="even"><td><a href="/film/4178/boxoffice" title="一个勺子">一个勺子</a></td><td>1338/0.9%</td><td>17.1万</td><td>8233.50</td><td>3.42万</td><td>1.26万</td><td>48.51万</td><td>53.42万</td><td>1711万</td> </tr>
+ <tr class="odd"><td><a href="/film/5023/boxoffice" title="摇滚水果">摇滚水果</a></td><td>840/0.6%</td><td>68.61万</td><td>5114.00</td><td>0</td><td>4.42万</td><td>70.3万</td><td>81.01万</td><td>--</td> </tr>
+ <tr class="even"><td><a href="/film/4896/boxoffice" title="前任攻略2：备胎反击战">前任攻略2</a></td><td>779/0.5%</td><td>9.36万</td><td>2177.00</td><td>2.3万</td><td>3558.00</td><td>22.53万</td><td>24.55万</td><td>2.51亿</td> </tr>
+ <tr class="odd"><td><a href="/film/5089/boxoffice" title="藏羚王之雪域精灵">藏羚王之雪</a></td><td>701/0.5%</td><td>12.12万</td><td>1134.00</td><td>0</td><td>1615.00</td><td>20.69万</td><td>20.75万</td><td>272万</td> </tr>
+ <tr class="even"><td class="right" colspan="9"><span class="form_description">各平台场次存在重叠，实时与预计票房为程序自行计算，仅供参考</span></td> </tr>
+</tbody>
+</table>
+</div></div><div id="box_office_live_wangpiao" class="box_office_live tab-pane"><div class="table-responsive"><table class="center_table table table table-bordered table-condensed">
+<thead><tr><th width="90">电影名称</th><th>总场次</th><th>票房(元)</th><th>统计场</th><th>废场</th><th>场均</th><th>上座率</th><th>人次</th><th>均价</th><th>场次占比</th><th>票房占比</th><th>操作</th></tr></thead><tbody>
+ <tr class="odd"><td><a href="/film/5040/boxoffice" title="火星救援">火星救援</a></td><td><a href="/content/film/5040/boxoffice/hour/20151127" title="场次分时明细">22260</a></td><td><a href="/content/film/5040/boxoffice/hour_wangpiao/20151127" title="票房分时明细">3279.23万</a></td><td>16842</td><td>2089</td><td>40</td><td>22.03%</td><td>680126</td><td>48</td><td>31.6%</td><td>46%</td><td><a href="/content/film/5040/schedule/wangpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5084/boxoffice" title="我的少女时代">我的少女</a></td><td><a href="/content/film/5084/boxoffice/hour/20151127" title="场次分时明细">11320</a></td><td><a href="/content/film/5084/boxoffice/hour_wangpiao/20151127" title="票房分时明细">1252.31万</a></td><td>8646</td><td>1044</td><td>39</td><td>29.47%</td><td>333228</td><td>38</td><td>16.1%</td><td>17.6%</td><td><a href="/content/film/5084/schedule/wangpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5012/boxoffice" title="消失的凶手">消失的凶</a></td><td><a href="/content/film/5012/boxoffice/hour/20151127" title="场次分时明细">11740</a></td><td><a href="/content/film/5012/boxoffice/hour_wangpiao/20151127" title="票房分时明细">1089.74万</a></td><td>6744</td><td>3156</td><td>37</td><td>28.07%</td><td>247205</td><td>44</td><td>16.7%</td><td>15.3%</td><td><a href="/content/film/5012/schedule/wangpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/4925/boxoffice" title="坏蛋必须死">坏蛋必须</a></td><td><a href="/content/film/4925/boxoffice/hour/20151127" title="场次分时明细">9436</a></td><td><a href="/content/film/4925/boxoffice/hour_wangpiao/20151127" title="票房分时明细">588.17万</a></td><td>6845</td><td>1268</td><td>23</td><td>18.96%</td><td>156467</td><td>38</td><td>13.4%</td><td>8.2%</td><td><a href="/content/film/4925/schedule/wangpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5066/boxoffice" title="玩命速递：重启之战">玩命速递</a></td><td><a href="/content/film/5066/boxoffice/hour/20151127" title="场次分时明细">4712</a></td><td><a href="/content/film/5066/boxoffice/hour_wangpiao/20151127" title="票房分时明细">237.79万</a></td><td>3074</td><td>979</td><td>18</td><td>14%</td><td>54173</td><td>44</td><td>6.7%</td><td>3.3%</td><td><a href="/content/film/5066/schedule/wangpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/3986/boxoffice" title="饥饿游戏3：嘲笑鸟（下）">饥饿游戏</a></td><td><a href="/content/film/3986/boxoffice/hour/20151127" title="场次分时明细">3262</a></td><td><a href="/content/film/3986/boxoffice/hour_wangpiao/20151127" title="票房分时明细">207.9万</a></td><td>2227</td><td>615</td><td>20</td><td>16.37%</td><td>44709</td><td>47</td><td>4.6%</td><td>2.9%</td><td><a href="/content/film/3986/schedule/wangpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5031/boxoffice" title="007：幽灵党">007：</a></td><td><a href="/content/film/5031/boxoffice/hour/20151127" title="场次分时明细">2873</a></td><td><a href="/content/film/5031/boxoffice/hour_wangpiao/20151127" title="票房分时明细">186.56万</a></td><td>2044</td><td>433</td><td>22</td><td>18.49%</td><td>44932</td><td>42</td><td>4.1%</td><td>2.6%</td><td><a href="/content/film/5031/schedule/wangpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5077/boxoffice" title="十月初五的月光">十月初五</a></td><td><a href="/content/film/5077/boxoffice/hour/20151127" title="场次分时明细">1246</a></td><td><a href="/content/film/5077/boxoffice/hour_wangpiao/20151127" title="票房分时明细">93.59万</a></td><td>903</td><td>156</td><td>28</td><td>20.92%</td><td>25606</td><td>37</td><td>1.8%</td><td>1.3%</td><td><a href="/content/film/5077/schedule/wangpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5023/boxoffice" title="摇滚水果">摇滚水果</a></td><td><a href="/content/film/5023/boxoffice/hour/20151127" title="场次分时明细">480</a></td><td><a href="/content/film/5023/boxoffice/hour_wangpiao/20151127" title="票房分时明细">68.61万</a></td><td>234</td><td>172</td><td>80</td><td>63.3%</td><td>18778</td><td>37</td><td>0.7%</td><td>1%</td><td><a href="/content/film/5023/schedule/wangpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/4824/boxoffice" title="诡影迷情">诡影迷情</a></td><td><a href="/content/film/4824/boxoffice/hour/20151127" title="场次分时明细">1633</a></td><td><a href="/content/film/4824/boxoffice/hour_wangpiao/20151127" title="票房分时明细">37.7万</a></td><td>345</td><td>176</td><td>30</td><td>28.73%</td><td>10391</td><td>36</td><td>2.3%</td><td>0.5%</td><td><a href="/content/film/4824/schedule/wangpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/4178/boxoffice" title="一个勺子">一个勺子</a></td><td><a href="/content/film/4178/boxoffice/hour/20151127" title="场次分时明细">401</a></td><td><a href="/content/film/4178/boxoffice/hour_wangpiao/20151127" title="票房分时明细">17.1万</a></td><td>271</td><td>99</td><td>17</td><td>16.03%</td><td>4539</td><td>38</td><td>0.6%</td><td>0.2%</td><td><a href="/content/film/4178/schedule/wangpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5089/boxoffice" title="藏羚王之雪域精灵">藏羚王之</a></td><td><a href="/content/film/5089/boxoffice/hour/20151127" title="场次分时明细">186</a></td><td><a href="/content/film/5089/boxoffice/hour_wangpiao/20151127" title="票房分时明细">12.12万</a></td><td>122</td><td>64</td><td>27</td><td>23.03%</td><td>3316</td><td>37</td><td>0.3%</td><td>0.2%</td><td><a href="/content/film/5089/schedule/wangpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td class="right" colspan="12">更新于 <span class="form_description">2015/11/27 20:58:58</span> | 不含预售 | 查看预售：<a href="/boxoffice/wangpiao" title="2015年11月27日网票预售统计">2015年11月27日网票预售统计</a> | <a target="_blank" title="2015年11月27日网票票房统计" alt="2015年11月27日网票票房统计" href="/share?code=MTEzNTI2LjIxNjM0Mi4xMDI4MTYuMTA3MTAwLjExMTM4NC4yMDc3NzQuMTE5OTUyLjExMTM4NC4yMzM0NzguMjE4NDg0LjEwMDY3NC4yMDk5MTYuMjM3NzYyLjI1NzA0MC4yMjQ5MTAuMjM1NjIwLjIxODQ4NC4yMzc3NjIuMjAzNDkwLjI1NDg5OC4yMDc3NzQuMjM1NjIwLjIyMDYyNi4yMzk5MDQuMjI0OTEwLjIwNzc3NC4yMzc3NjIuMTAwNjc0LjIwOTkxNi4yMDc3NzQuMjI3MDUyLjIxMjA1OC4yNDIwNDYuMjEyMDU4LjIxMjA1OC4yMDk5MTYuMjMxMzM2LjEwMDY3NC4yMDk5MTYuMjA3Nzc0LjIyNzA1Mi4yMTIwNTguMjQyMDQ2LjIxMjA1OC4yMTIwNTguMjA5OTE2LjIzMTMzNi4yMDk5MTYuMjA3Nzc0LjIyNzA1Mi4yMTIwNTguMjEyMDU4Ljk4NTMyLjIzOTkwNC4yMzU2MjAuMjIwNjI2LjEyNDIzNi4xMjQyMzYuMjY1NjA4LjEyNDIzNi4xMjQyMzYuMTA3MTAwLjEwMjgxNi4xMDQ5NTguMTEzNTI2LjQ5MDUxOC4zOTYyNzAuMzg1NTYwLjEwNDk1OC4xMDQ5NTguNDkyNjYwLjMzNDE1Mi4yOTEzMTIuMTA3MTAwLjExNzgxMC40OTI2NjAuMzIzNDQyLjM1MzQzMC40OTQ4MDIuNDA0ODM4LjMxMDU5MC40OTQ4MDIuMzUzNDMwLjM1OTg1Ni40OTQ4MDIuMzUzNDMwLjM1OTg1Ni40OTI2NjAuMjkxMzEyLjQwOTEyMi40OTQ4MDIuNDAwNTU0LjM0MDU3OC40OTY5NDQuMzcyNzA4LjM0NDg2Mi4xMjQyMzYuMTI0MjM2LjI2NTYwOC4xMjQyMzYuMTI0MjM2LjIwOTkxNi4yMzc3NjIuMjU3MDQwLjIzNzc2Mi4yMTg0ODQuMjE4NDg0LjIyNDkxMC4yMTIwNTguMjE2MzQyLjEwMDY3NC4yNTQ4OTguMjA3Nzc0LjIzNTYyMC4yMjA2MjYuMjM5OTA0LjIyNDkxMC4yMDc3NzQuMjM3NzYyLjA=">数据截图</a></td> </tr>
+</tbody>
+</table>
+</div></div><div id="box_office_live_hipiao" class="box_office_live tab-pane"><div class="table-responsive"><table class="center_table table table table-bordered table-condensed">
+<thead><tr><th width="90">电影名称</th><th>总场次</th><th>票房(元)</th><th>统计场</th><th>废场</th><th>场均</th><th>上座率</th><th>人次</th><th>均价</th><th>场次占比</th><th>票房占比</th><th>操作</th></tr></thead><tbody>
+ <tr class="odd"><td><a href="/film/5040/boxoffice" title="火星救援">火星救援</a></td><td><a href="/content/film/5040/boxoffice/hour/20151127" title="场次分时明细">2965</a></td><td><a href="/content/film/5040/boxoffice/hour_hipiao/20151127" title="票房分时明细">919.49万</a></td><td>2268</td><td>274</td><td>118</td><td>84.51%</td><td>266677</td><td>34</td><td>34.6%</td><td>41.8%</td><td><a href="/content/film/5040/schedule/hipiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5012/boxoffice" title="消失的凶手">消失的凶</a></td><td><a href="/content/film/5012/boxoffice/hour/20151127" title="场次分时明细">1494</a></td><td><a href="/content/film/5012/boxoffice/hour_hipiao/20151127" title="票房分时明细">414.56万</a></td><td>1216</td><td>108</td><td>107</td><td>89.55%</td><td>129546</td><td>32</td><td>17.4%</td><td>18.9%</td><td><a href="/content/film/5012/schedule/hipiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5084/boxoffice" title="我的少女时代">我的少女</a></td><td><a href="/content/film/5084/boxoffice/hour/20151127" title="场次分时明细">1732</a></td><td><a href="/content/film/5084/boxoffice/hour_hipiao/20151127" title="票房分时明细">406.65万</a></td><td>1330</td><td>136</td><td>110</td><td>86.08%</td><td>146964</td><td>28</td><td>20.2%</td><td>18.5%</td><td><a href="/content/film/5084/schedule/hipiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/4925/boxoffice" title="坏蛋必须死">坏蛋必须</a></td><td><a href="/content/film/4925/boxoffice/hour/20151127" title="场次分时明细">944</a></td><td><a href="/content/film/4925/boxoffice/hour_hipiao/20151127" title="票房分时明细">205.54万</a></td><td>725</td><td>88</td><td>100</td><td>84.41%</td><td>72528</td><td>28</td><td>11%</td><td>9.3%</td><td><a href="/content/film/4925/schedule/hipiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5066/boxoffice" title="玩命速递：重启之战">玩命速递</a></td><td><a href="/content/film/5066/boxoffice/hour/20151127" title="场次分时明细">578</a></td><td><a href="/content/film/5066/boxoffice/hour_hipiao/20151127" title="票房分时明细">126.38万</a></td><td>438</td><td>75</td><td>93</td><td>80.6%</td><td>40740</td><td>31</td><td>6.7%</td><td>5.7%</td><td><a href="/content/film/5066/schedule/hipiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5077/boxoffice" title="十月初五的月光">十月初五</a></td><td><a href="/content/film/5077/boxoffice/hour/20151127" title="场次分时明细">276</a></td><td><a href="/content/film/5077/boxoffice/hour_hipiao/20151127" title="票房分时明细">69.79万</a></td><td>189</td><td>44</td><td>133</td><td>82.65%</td><td>25085</td><td>28</td><td>3.2%</td><td>3.2%</td><td><a href="/content/film/5077/schedule/hipiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/3986/boxoffice" title="饥饿游戏3：嘲笑鸟（下）">饥饿游戏</a></td><td><a href="/content/film/3986/boxoffice/hour/20151127" title="场次分时明细">137</a></td><td><a href="/content/film/3986/boxoffice/hour_hipiao/20151127" title="票房分时明细">27.76万</a></td><td>102</td><td>21</td><td>83</td><td>77.39%</td><td>8473</td><td>33</td><td>1.6%</td><td>1.3%</td><td><a href="/content/film/3986/schedule/hipiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5031/boxoffice" title="007：幽灵党">007：</a></td><td><a href="/content/film/5031/boxoffice/hour/20151127" title="场次分时明细">128</a></td><td><a href="/content/film/5031/boxoffice/hour_hipiao/20151127" title="票房分时明细">24.01万</a></td><td>101</td><td>19</td><td>82</td><td>66.44%</td><td>8243</td><td>29</td><td>1.5%</td><td>1.1%</td><td><a href="/content/film/5031/schedule/hipiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/4824/boxoffice" title="诡影迷情">诡影迷情</a></td><td><a href="/content/film/4824/boxoffice/hour/20151127" title="场次分时明细">249</a></td><td><a href="/content/film/4824/boxoffice/hour_hipiao/20151127" title="票房分时明细">2.91万</a></td><td>20</td><td>14</td><td>54</td><td>60.38%</td><td>1079</td><td>27</td><td>2.9%</td><td>0.1%</td><td><a href="/content/film/4824/schedule/hipiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/4178/boxoffice" title="一个勺子">一个勺子</a></td><td><a href="/content/film/4178/boxoffice/hour/20151127" title="场次分时明细">15</a></td><td><a href="/content/film/4178/boxoffice/hour_hipiao/20151127" title="票房分时明细">8234</a></td><td>9</td><td>5</td><td>32</td><td>36.15%</td><td>287</td><td>29</td><td>0.2%</td><td>0%</td><td><a href="/content/film/4178/schedule/hipiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5023/boxoffice" title="摇滚水果">摇滚水果</a></td><td><a href="/content/film/5023/boxoffice/hour/20151127" title="场次分时明细">9</a></td><td><a href="/content/film/5023/boxoffice/hour_hipiao/20151127" title="票房分时明细">5114</a></td><td>3</td><td>5</td><td>67</td><td>64.52%</td><td>200</td><td>26</td><td>0.1%</td><td>0%</td><td><a href="/content/film/5023/schedule/hipiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/4896/boxoffice" title="前任攻略2：备胎反击战">前任攻略</a></td><td><a href="/content/film/4896/boxoffice/hour/20151127" title="场次分时明细">5</a></td><td><a href="/content/film/4896/boxoffice/hour_hipiao/20151127" title="票房分时明细">2177</a></td><td>4</td><td></td><td>18</td><td>25.89%</td><td>73</td><td>30</td><td>0.1%</td><td>0%</td><td><a href="/content/film/4896/schedule/hipiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td class="right" colspan="12">更新于 <span class="form_description">2015/11/27 20:58:58</span> | 不含预售 | 查看预售：<a href="/boxoffice/hipiao" title="2015年11月27日哈票预售统计">2015年11月27日哈票预售统计</a> | <a target="_blank" title="2015年11月27日哈票票房统计" alt="2015年11月27日哈票票房统计" href="/share?code=MTEzNTI2LjIxNjM0Mi4xMDI4MTYuMTA3MTAwLjExMTM4NC4yMDc3NzQuMTE5OTUyLjExMTM4NC4yMzM0NzguMjE4NDg0LjEwMDY3NC4yMDk5MTYuMjM3NzYyLjI1NzA0MC4yMjQ5MTAuMjM1NjIwLjIxODQ4NC4yMzc3NjIuMjAzNDkwLjIyMjc2OC4yMjQ5MTAuMjM5OTA0LjIyNDkxMC4yMDc3NzQuMjM3NzYyLjEwMDY3NC4yMDk5MTYuMjA3Nzc0LjIyNzA1Mi4yMTIwNTguMjQyMDQ2LjIxMjA1OC4yMTIwNTguMjA5OTE2LjIzMTMzNi4xMDA2NzQuMjA5OTE2LjIwNzc3NC4yMjcwNTIuMjEyMDU4LjI0MjA0Ni4yMTIwNTguMjEyMDU4LjIwOTkxNi4yMzEzMzYuMjA5OTE2LjIwNzc3NC4yMjcwNTIuMjEyMDU4LjIxMjA1OC45ODUzMi4yMzk5MDQuMjM1NjIwLjIyMDYyNi4xMjQyMzYuMTI0MjM2LjI2NTYwOC4xMjQyMzYuMTI0MjM2LjEwNzEwMC4xMDI4MTYuMTA0OTU4LjExMzUyNi40OTA1MTguMzk2MjcwLjM4NTU2MC4xMDQ5NTguMTA0OTU4LjQ5MjY2MC4zMzQxNTIuMjkxMzEyLjEwNzEwMC4xMTc4MTAuNDkyNjYwLjMyMzQ0Mi4zNTM0MzAuNDkwNTE4LjMxNDg3NC4yOTEzMTIuNDk0ODAyLjM1MzQzMC4zNTk4NTYuNDk0ODAyLjM1MzQzMC4zNTk4NTYuNDkyNjYwLjI5MTMxMi40MDkxMjIuNDk0ODAyLjQwMDU1NC4zNDA1NzguNDk2OTQ0LjM3MjcwOC4zNDQ4NjIuMTI0MjM2LjEyNDIzNi4yNjU2MDguMTI0MjM2LjEyNDIzNi4yMDk5MTYuMjM3NzYyLjI1NzA0MC4yMzc3NjIuMjE4NDg0LjIxODQ4NC4yMjQ5MTAuMjEyMDU4LjIxNjM0Mi4xMDA2NzQuMjIyNzY4LjIyNDkxMC4yMzk5MDQuMjI0OTEwLjIwNzc3NC4yMzc3NjIuMA==">数据截图</a></td> </tr>
+</tbody>
+</table>
+</div></div><div id="box_office_live_wanda" class="box_office_live tab-pane"><div class="table-responsive"><table class="center_table table table table-bordered table-condensed">
+<thead><tr><th width="90">电影名称</th><th>总场次</th><th>票房(元)</th><th>统计场</th><th>废场</th><th>场均</th><th>上座率</th><th>人次</th><th>均价</th><th>场次占比</th><th>票房占比</th><th>操作</th></tr></thead><tbody>
+ <tr class="odd"><td><a href="/film/5040/boxoffice" title="火星救援">火星救援</a></td><td><a href="/content/film/5040/boxoffice/hour/20151127" title="场次分时明细">3622</a></td><td><a href="/content/film/5040/boxoffice/hour_wanda/20151127" title="票房分时明细">1430.04万</a></td><td>2875</td><td>166</td><td>56</td><td>23.91%</td><td>160129</td><td>89</td><td>31.9%</td><td>52.1%</td><td><a href="/content/film/5040/schedule/wanda/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5084/boxoffice" title="我的少女时代">我的少女</a></td><td><a href="/content/film/5084/boxoffice/hour/20151127" title="场次分时明细">1738</a></td><td><a href="/content/film/5084/boxoffice/hour_wanda/20151127" title="票房分时明细">437.44万</a></td><td>1382</td><td>68</td><td>50</td><td>32.47%</td><td>68452</td><td>64</td><td>15.3%</td><td>15.9%</td><td><a href="/content/film/5084/schedule/wanda/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5012/boxoffice" title="消失的凶手">消失的凶</a></td><td><a href="/content/film/5012/boxoffice/hour/20151127" title="场次分时明细">862</a></td><td><a href="/content/film/5012/boxoffice/hour_wanda/20151127" title="票房分时明细">324.03万</a></td><td>508</td><td>219</td><td>80</td><td>55.18%</td><td>40610</td><td>80</td><td>7.6%</td><td>11.8%</td><td><a href="/content/film/5012/schedule/wanda/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/4925/boxoffice" title="坏蛋必须死">坏蛋必须</a></td><td><a href="/content/film/4925/boxoffice/hour/20151127" title="场次分时明细">1513</a></td><td><a href="/content/film/4925/boxoffice/hour_wanda/20151127" title="票房分时明细">176.86万</a></td><td>1185</td><td>99</td><td>25</td><td>19.25%</td><td>29601</td><td>60</td><td>13.3%</td><td>6.4%</td><td><a href="/content/film/4925/schedule/wanda/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5066/boxoffice" title="玩命速递：重启之战">玩命速递</a></td><td><a href="/content/film/5066/boxoffice/hour/20151127" title="场次分时明细">1297</a></td><td><a href="/content/film/5066/boxoffice/hour_wanda/20151127" title="票房分时明细">164.52万</a></td><td>989</td><td>111</td><td>22</td><td>15.32%</td><td>22067</td><td>75</td><td>11.4%</td><td>6%</td><td><a href="/content/film/5066/schedule/wanda/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/3986/boxoffice" title="饥饿游戏3：嘲笑鸟（下）">饥饿游戏</a></td><td><a href="/content/film/3986/boxoffice/hour/20151127" title="场次分时明细">1154</a></td><td><a href="/content/film/3986/boxoffice/hour_wanda/20151127" title="票房分时明细">108.71万</a></td><td>807</td><td>171</td><td>18</td><td>12.35%</td><td>14297</td><td>76</td><td>10.2%</td><td>4%</td><td><a href="/content/film/3986/schedule/wanda/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5031/boxoffice" title="007：幽灵党">007：</a></td><td><a href="/content/film/5031/boxoffice/hour/20151127" title="场次分时明细">870</a></td><td><a href="/content/film/5031/boxoffice/hour_wanda/20151127" title="票房分时明细">82.73万</a></td><td>608</td><td>134</td><td>22</td><td>19.8%</td><td>13363</td><td>62</td><td>7.7%</td><td>3%</td><td><a href="/content/film/5031/schedule/wanda/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5077/boxoffice" title="十月初五的月光">十月初五</a></td><td><a href="/content/film/5077/boxoffice/hour/20151127" title="场次分时明细">83</a></td><td><a href="/content/film/5077/boxoffice/hour_wanda/20151127" title="票房分时明细">9.07万</a></td><td>68</td><td>2</td><td>23</td><td>16.7%</td><td>1594</td><td>57</td><td>0.7%</td><td>0.3%</td><td><a href="/content/film/5077/schedule/wanda/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/4178/boxoffice" title="一个勺子">一个勺子</a></td><td><a href="/content/film/4178/boxoffice/hour/20151127" title="场次分时明细">44</a></td><td><a href="/content/film/4178/boxoffice/hour_wanda/20151127" title="票房分时明细">3.42万</a></td><td>37</td><td>5</td><td>18</td><td>13.4%</td><td>654</td><td>52</td><td>0.4%</td><td>0.1%</td><td><a href="/content/film/4178/schedule/wanda/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/4824/boxoffice" title="诡影迷情">诡影迷情</a></td><td><a href="/content/film/4824/boxoffice/hour/20151127" title="场次分时明细">124</a></td><td><a href="/content/film/4824/boxoffice/hour_wanda/20151127" title="票房分时明细">2.73万</a></td><td>25</td><td>9</td><td>20</td><td>14.03%</td><td>493</td><td>55</td><td>1.1%</td><td>0.1%</td><td><a href="/content/film/4824/schedule/wanda/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/4896/boxoffice" title="前任攻略2：备胎反击战">前任攻略</a></td><td><a href="/content/film/4896/boxoffice/hour/20151127" title="场次分时明细">31</a></td><td><a href="/content/film/4896/boxoffice/hour_wanda/20151127" title="票房分时明细">2.3万</a></td><td>22</td><td>7</td><td>16</td><td>15.14%</td><td>356</td><td>65</td><td>0.3%</td><td>0.1%</td><td><a href="/content/film/4896/schedule/wanda/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/4960/boxoffice" title="杜拉拉追婚记">杜拉拉追</a></td><td><a href="/content/film/4960/boxoffice/hour/20151127" title="场次分时明细">1</a></td><td><a href="/content/film/4960/boxoffice/hour_wanda/20151127" title="票房分时明细">1.32万</a></td><td>1</td><td></td><td>263</td><td>93.93%</td><td>263</td><td>50</td><td>0%</td><td>0%</td><td><a href="/content/film/4960/schedule/wanda/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td class="right" colspan="12">更新于 <span class="form_description">2015/11/27 20:58:58</span> | 不含预售 | 查看预售：<a href="/boxoffice/wanda" title="2015年11月27日万达预售统计">2015年11月27日万达预售统计</a> | <a target="_blank" title="2015年11月27日万达票房统计" alt="2015年11月27日万达票房统计" href="/share?code=MTEzNTI2LjIxNjM0Mi4xMDI4MTYuMTA3MTAwLjExMTM4NC4yMDc3NzQuMTE5OTUyLjExMTM4NC4yMzM0NzguMjE4NDg0LjEwMDY3NC4yMDk5MTYuMjM3NzYyLjI1NzA0MC4yMjQ5MTAuMjM1NjIwLjIxODQ4NC4yMzc3NjIuMjAzNDkwLjI1NDg5OC4yMDc3NzQuMjM1NjIwLjIxNDIwMC4yMDc3NzQuMTAwNjc0LjIwOTkxNi4yMDc3NzQuMjI3MDUyLjIxMjA1OC4yNDIwNDYuMjEyMDU4LjIxMjA1OC4yMDk5MTYuMjMxMzM2LjEwMDY3NC4yMDk5MTYuMjA3Nzc0LjIyNzA1Mi4yMTIwNTguMjQyMDQ2LjIxMjA1OC4yMTIwNTguMjA5OTE2LjIzMTMzNi4yMDk5MTYuMjA3Nzc0LjIyNzA1Mi4yMTIwNTguMjEyMDU4Ljk4NTMyLjIzOTkwNC4yMzU2MjAuMjIwNjI2LjEyNDIzNi4xMjQyMzYuMjY1NjA4LjEyNDIzNi4xMjQyMzYuMTA3MTAwLjEwMjgxNi4xMDQ5NTguMTEzNTI2LjQ5MDUxOC4zOTYyNzAuMzg1NTYwLjEwNDk1OC4xMDQ5NTguNDkyNjYwLjMzNDE1Mi4yOTEzMTIuMTA3MTAwLjExNzgxMC40OTI2NjAuMzIzNDQyLjM1MzQzMC40ODgzNzYuMzk0MTI4LjI4OTE3MC40OTY5NDQuNDA2OTgwLjQwNjk4MC40OTQ4MDIuMzUzNDMwLjM1OTg1Ni40OTI2NjAuMjkxMzEyLjQwOTEyMi40OTQ4MDIuNDAwNTU0LjM0MDU3OC40OTY5NDQuMzcyNzA4LjM0NDg2Mi4xMjQyMzYuMTI0MjM2LjI2NTYwOC4xMjQyMzYuMTI0MjM2LjIwOTkxNi4yMzc3NjIuMjU3MDQwLjIzNzc2Mi4yMTg0ODQuMjE4NDg0LjIyNDkxMC4yMTIwNTguMjE2MzQyLjEwMDY3NC4yNTQ4OTguMjA3Nzc0LjIzNTYyMC4yMTQyMDAuMjA3Nzc0LjA=">数据截图</a></td> </tr>
+</tbody>
+</table>
+</div></div><div id="box_office_live_jinyi" class="box_office_live tab-pane"><div class="table-responsive"><table class="center_table table table table-bordered table-condensed">
+<thead><tr><th width="90">电影名称</th><th>总场次</th><th>票房(元)</th><th>统计场</th><th>废场</th><th>场均</th><th>上座率</th><th>人次</th><th>均价</th><th>场次占比</th><th>票房占比</th><th>操作</th></tr></thead><tbody>
+ <tr class="odd"><td><a href="/film/5040/boxoffice" title="火星救援">火星救援</a></td><td><a href="/content/film/5040/boxoffice/hour/20151127" title="场次分时明细">1762</a></td><td><a href="/content/film/5040/boxoffice/hour_jinyi/20151127" title="票房分时明细">259.44万</a></td><td>1340</td><td>144</td><td>44</td><td>20.55%</td><td>58876</td><td>44</td><td>33.6%</td><td>44.3%</td><td><a href="/content/film/5040/schedule/jinyi/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5012/boxoffice" title="消失的凶手">消失的凶</a></td><td><a href="/content/film/5012/boxoffice/hour/20151127" title="场次分时明细">1032</a></td><td><a href="/content/film/5012/boxoffice/hour_jinyi/20151127" title="票房分时明细">149.48万</a></td><td>610</td><td>256</td><td>59</td><td>40.51%</td><td>36102</td><td>41</td><td>19.7%</td><td>25.5%</td><td><a href="/content/film/5012/schedule/jinyi/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5084/boxoffice" title="我的少女时代">我的少女</a></td><td><a href="/content/film/5084/boxoffice/hour/20151127" title="场次分时明细">735</a></td><td><a href="/content/film/5084/boxoffice/hour_jinyi/20151127" title="票房分时明细">87.99万</a></td><td>566</td><td>54</td><td>44</td><td>30.67%</td><td>24844</td><td>35</td><td>14%</td><td>15%</td><td><a href="/content/film/5084/schedule/jinyi/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/4925/boxoffice" title="坏蛋必须死">坏蛋必须</a></td><td><a href="/content/film/4925/boxoffice/hour/20151127" title="场次分时明细">616</a></td><td><a href="/content/film/4925/boxoffice/hour_jinyi/20151127" title="票房分时明细">32.21万</a></td><td>444</td><td>94</td><td>22</td><td>16.97%</td><td>9656</td><td>33</td><td>11.7%</td><td>5.5%</td><td><a href="/content/film/4925/schedule/jinyi/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/3986/boxoffice" title="饥饿游戏3：嘲笑鸟（下）">饥饿游戏</a></td><td><a href="/content/film/3986/boxoffice/hour/20151127" title="场次分时明细">281</a></td><td><a href="/content/film/3986/boxoffice/hour_jinyi/20151127" title="票房分时明细">18.87万</a></td><td>198</td><td>48</td><td>24</td><td>17.85%</td><td>4711</td><td>40</td><td>5.4%</td><td>3.2%</td><td><a href="/content/film/3986/schedule/jinyi/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5066/boxoffice" title="玩命速递：重启之战">玩命速递</a></td><td><a href="/content/film/5066/boxoffice/hour/20151127" title="场次分时明细">253</a></td><td><a href="/content/film/5066/boxoffice/hour_jinyi/20151127" title="票房分时明细">12.24万</a></td><td>173</td><td>45</td><td>19</td><td>13.62%</td><td>3287</td><td>37</td><td>4.8%</td><td>2.1%</td><td><a href="/content/film/5066/schedule/jinyi/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5031/boxoffice" title="007：幽灵党">007：</a></td><td><a href="/content/film/5031/boxoffice/hour/20151127" title="场次分时明细">167</a></td><td><a href="/content/film/5031/boxoffice/hour_jinyi/20151127" title="票房分时明细">10.53万</a></td><td>120</td><td>20</td><td>23</td><td>19.71%</td><td>2745</td><td>38</td><td>3.2%</td><td>1.8%</td><td><a href="/content/film/5031/schedule/jinyi/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5077/boxoffice" title="十月初五的月光">十月初五</a></td><td><a href="/content/film/5077/boxoffice/hour/20151127" title="场次分时明细">147</a></td><td><a href="/content/film/5077/boxoffice/hour_jinyi/20151127" title="票房分时明细">9.02万</a></td><td>108</td><td>20</td><td>22</td><td>16.46%</td><td>2369</td><td>38</td><td>2.8%</td><td>1.5%</td><td><a href="/content/film/5077/schedule/jinyi/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5023/boxoffice" title="摇滚水果">摇滚水果</a></td><td><a href="/content/film/5023/boxoffice/hour/20151127" title="场次分时明细">76</a></td><td><a href="/content/film/5023/boxoffice/hour_jinyi/20151127" title="票房分时明细">4.42万</a></td><td>26</td><td>36</td><td>52</td><td>39.57%</td><td>1355</td><td>33</td><td>1.4%</td><td>0.8%</td><td><a href="/content/film/5023/schedule/jinyi/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/4178/boxoffice" title="一个勺子">一个勺子</a></td><td><a href="/content/film/4178/boxoffice/hour/20151127" title="场次分时明细">24</a></td><td><a href="/content/film/4178/boxoffice/hour_jinyi/20151127" title="票房分时明细">1.26万</a></td><td>18</td><td>4</td><td>19</td><td>15.72%</td><td>337</td><td>37</td><td>0.5%</td><td>0.2%</td><td><a href="/content/film/4178/schedule/jinyi/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/4896/boxoffice" title="前任攻略2：备胎反击战">前任攻略</a></td><td><a href="/content/film/4896/boxoffice/hour/20151127" title="场次分时明细">10</a></td><td><a href="/content/film/4896/boxoffice/hour_jinyi/20151127" title="票房分时明细">3558</a></td><td>9</td><td></td><td>10</td><td>7.53%</td><td>92</td><td>39</td><td>0.2%</td><td>0.1%</td><td><a href="/content/film/4896/schedule/jinyi/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5089/boxoffice" title="藏羚王之雪域精灵">藏羚王之</a></td><td><a href="/content/film/5089/boxoffice/hour/20151127" title="场次分时明细">6</a></td><td><a href="/content/film/5089/boxoffice/hour_jinyi/20151127" title="票房分时明细">1615</a></td><td>3</td><td>3</td><td>17</td><td>10.92%</td><td>51</td><td>32</td><td>0.1%</td><td>0%</td><td><a href="/content/film/5089/schedule/jinyi/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td class="right" colspan="12">更新于 <span class="form_description">2015/11/27 20:58:58</span> | 不含预售 | 查看预售：<a href="/boxoffice/jinyi" title="2015年11月27日金逸预售统计">2015年11月27日金逸预售统计</a> | <a target="_blank" title="2015年11月27日金逸票房统计" alt="2015年11月27日金逸票房统计" href="/share?code=MTEzNTI2LjIxNjM0Mi4xMDI4MTYuMTA3MTAwLjExMTM4NC4yMDc3NzQuMTE5OTUyLjExMTM4NC4yMzM0NzguMjE4NDg0LjEwMDY3NC4yMDk5MTYuMjM3NzYyLjI1NzA0MC4yMjQ5MTAuMjM1NjIwLjIxODQ4NC4yMzc3NjIuMjAzNDkwLjIyNzA1Mi4yMjQ5MTAuMjM1NjIwLjI1OTE4Mi4yMjQ5MTAuMTAwNjc0LjIwOTkxNi4yMDc3NzQuMjI3MDUyLjIxMjA1OC4yNDIwNDYuMjEyMDU4LjIxMjA1OC4yMDk5MTYuMjMxMzM2LjEwMDY3NC4yMDk5MTYuMjA3Nzc0LjIyNzA1Mi4yMTIwNTguMjQyMDQ2LjIxMjA1OC4yMTIwNTguMjA5OTE2LjIzMTMzNi4yMDk5MTYuMjA3Nzc0LjIyNzA1Mi4yMTIwNTguMjEyMDU4Ljk4NTMyLjIzOTkwNC4yMzU2MjAuMjIwNjI2LjEyNDIzNi4xMjQyMzYuMjY1NjA4LjEyNDIzNi4xMjQyMzYuMTA3MTAwLjEwMjgxNi4xMDQ5NTguMTEzNTI2LjQ5MDUxOC4zOTYyNzAuMzg1NTYwLjEwNDk1OC4xMDQ5NTguNDkyNjYwLjMzNDE1Mi4yOTEzMTIuMTA3MTAwLjExNzgxMC40OTI2NjAuMzIzNDQyLjM1MzQzMC40OTkwODYuMjg5MTcwLjMxMDU5MC40OTkwODYuMjc0MTc2LjM5NDEyOC40OTQ4MDIuMzUzNDMwLjM1OTg1Ni40OTI2NjAuMjkxMzEyLjQwOTEyMi40OTQ4MDIuNDAwNTU0LjM0MDU3OC40OTY5NDQuMzcyNzA4LjM0NDg2Mi4xMjQyMzYuMTI0MjM2LjI2NTYwOC4xMjQyMzYuMTI0MjM2LjIwOTkxNi4yMzc3NjIuMjU3MDQwLjIzNzc2Mi4yMTg0ODQuMjE4NDg0LjIyNDkxMC4yMTIwNTguMjE2MzQyLjEwMDY3NC4yMjcwNTIuMjI0OTEwLjIzNTYyMC4yNTkxODIuMjI0OTEwLjA=">数据截图</a></td> </tr>
+</tbody>
+</table>
+</div></div><div id="box_office_live_tpiao" class="box_office_live tab-pane"><div class="table-responsive"><table class="center_table table table table-bordered table-condensed">
+<thead><tr><th width="90">电影名称</th><th>总场次</th><th>票房(元)</th><th>统计场</th><th>废场</th><th>场均</th><th>上座率</th><th>人次</th><th>均价</th><th>场次占比</th><th>票房占比</th><th>操作</th></tr></thead><tbody>
+ <tr class="odd"><td><a href="/film/5012/boxoffice" title="消失的凶手">消失的凶</a></td><td><a href="/content/film/5012/boxoffice/hour/20151127" title="场次分时明细">18127</a></td><td><a href="/content/film/5012/boxoffice/hour_tpiao/20151127" title="票房分时明细">1135.76万</a></td><td>10193</td><td>5157</td><td>31</td><td>24.96%</td><td>320225</td><td>35</td><td>16.1%</td><td>52.1%</td><td><a href="/content/film/5012/schedule/tpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/4925/boxoffice" title="坏蛋必须死">坏蛋必须</a></td><td><a href="/content/film/4925/boxoffice/hour/20151127" title="场次分时明细">15552</a></td><td><a href="/content/film/4925/boxoffice/hour_tpiao/20151127" title="票房分时明细">424.03万</a></td><td>7457</td><td>5949</td><td>18</td><td>15.4%</td><td>135162</td><td>31</td><td>13.8%</td><td>19.5%</td><td><a href="/content/film/4925/schedule/tpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5040/boxoffice" title="火星救援">火星救援</a></td><td><a href="/content/film/5040/boxoffice/hour/20151127" title="场次分时明细">35361</a></td><td><a href="/content/film/5040/boxoffice/hour_tpiao/20151127" title="票房分时明细">195.66万</a></td><td>1828</td><td>28273</td><td>24</td><td>9.85%</td><td>43651</td><td>45</td><td>31.3%</td><td>9%</td><td><a href="/content/film/5040/schedule/tpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5066/boxoffice" title="玩命速递：重启之战">玩命速递</a></td><td><a href="/content/film/5066/boxoffice/hour/20151127" title="场次分时明细">8056</a></td><td><a href="/content/film/5066/boxoffice/hour_tpiao/20151127" title="票房分时明细">193.34万</a></td><td>4256</td><td>2654</td><td>13</td><td>10.14%</td><td>54196</td><td>36</td><td>7.1%</td><td>8.9%</td><td><a href="/content/film/5066/schedule/tpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5031/boxoffice" title="007：幽灵党">007：</a></td><td><a href="/content/film/5031/boxoffice/hour/20151127" title="场次分时明细">4857</a></td><td><a href="/content/film/5031/boxoffice/hour_tpiao/20151127" title="票房分时明细">69.79万</a></td><td>2092</td><td>2088</td><td>10</td><td>8.25%</td><td>20031</td><td>35</td><td>4.3%</td><td>3.2%</td><td><a href="/content/film/5031/schedule/tpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5077/boxoffice" title="十月初五的月光">十月初五</a></td><td><a href="/content/film/5077/boxoffice/hour/20151127" title="场次分时明细">1655</a></td><td><a href="/content/film/5077/boxoffice/hour_tpiao/20151127" title="票房分时明细">63.84万</a></td><td>1022</td><td>392</td><td>19</td><td>14.8%</td><td>19496</td><td>33</td><td>1.5%</td><td>2.9%</td><td><a href="/content/film/5077/schedule/tpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5023/boxoffice" title="摇滚水果">摇滚水果</a></td><td><a href="/content/film/5023/boxoffice/hour/20151127" title="场次分时明细">609</a></td><td><a href="/content/film/5023/boxoffice/hour_tpiao/20151127" title="票房分时明细">11.48万</a></td><td>33</td><td>489</td><td>111</td><td>76.76%</td><td>3656</td><td>31</td><td>0.5%</td><td>0.5%</td><td><a href="/content/film/5023/schedule/tpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/5084/boxoffice" title="我的少女时代">我的少女</a></td><td><a href="/content/film/5084/boxoffice/hour/20151127" title="场次分时明细">17772</a></td><td><a href="/content/film/5084/boxoffice/hour_tpiao/20151127" title="票房分时明细">9.55万</a></td><td>219</td><td>15033</td><td>13</td><td>9.92%</td><td>2939</td><td>33</td><td>15.7%</td><td>0.4%</td><td><a href="/content/film/5084/schedule/tpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/3986/boxoffice" title="饥饿游戏3：嘲笑鸟（下）">饥饿游戏</a></td><td><a href="/content/film/3986/boxoffice/hour/20151127" title="场次分时明细">5306</a></td><td><a href="/content/film/3986/boxoffice/hour_tpiao/20151127" title="票房分时明细">9.47万</a></td><td>99</td><td>4509</td><td>31</td><td>22.79%</td><td>3038</td><td>31</td><td>4.7%</td><td>0.4%</td><td><a href="/content/film/3986/schedule/tpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/4824/boxoffice" title="诡影迷情">诡影迷情</a></td><td><a href="/content/film/4824/boxoffice/hour/20151127" title="场次分时明细">2604</a></td><td><a href="/content/film/4824/boxoffice/hour_tpiao/20151127" title="票房分时明细">8.87万</a></td><td>37</td><td>941</td><td>78</td><td>64.56%</td><td>2877</td><td>31</td><td>2.3%</td><td>0.4%</td><td><a href="/content/film/4824/schedule/tpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td><a href="/film/5029/boxoffice" title="史努比：花生大电影">史努比：</a></td><td><a href="/content/film/5029/boxoffice/hour/20151127" title="场次分时明细">291</a></td><td><a href="/content/film/5029/boxoffice/hour_tpiao/20151127" title="票房分时明细">8.2万</a></td><td>90</td><td>201</td><td>20</td><td>16.04%</td><td>1807</td><td>45</td><td>0.3%</td><td>0.4%</td><td><a href="/content/film/5029/schedule/tpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="even"><td><a href="/film/4347/boxoffice" title="藏羚王">藏羚王</a></td><td><a href="/content/film/4347/boxoffice/hour/20151127" title="场次分时明细">335</a></td><td><a href="/content/film/4347/boxoffice/hour_tpiao/20151127" title="票房分时明细">8.03万</a></td><td>98</td><td>236</td><td>24</td><td>21.19%</td><td>2364</td><td>34</td><td>0.3%</td><td>0.4%</td><td><a href="/content/film/4347/schedule/tpiao/20151127" title="明细">明细</a></td> </tr>
+ <tr class="odd"><td class="right" colspan="12">更新于 <span class="form_description">2015/11/27 20:58:58</span> | 不含预售 | 查看预售：<a href="/boxoffice/tpiao" title="2015年11月27日淘电影预售统计">2015年11月27日淘电影预售统计</a> | <a target="_blank" title="2015年11月27日淘电影票房统计" alt="2015年11月27日淘电影票房统计" href="/share?code=MTEzNTI2LjIxNjM0Mi4xMDI4MTYuMTA3MTAwLjExMTM4NC4yMDc3NzQuMTE5OTUyLjExMTM4NC4yMzM0NzguMjE4NDg0LjEwMDY3NC4yMDk5MTYuMjM3NzYyLjI1NzA0MC4yMjQ5MTAuMjM1NjIwLjIxODQ4NC4yMzc3NjIuMjAzNDkwLjI0ODQ3Mi4yMzk5MDQuMjI0OTEwLjIwNzc3NC4yMzc3NjIuMTAwNjc0LjIwOTkxNi4yMDc3NzQuMjI3MDUyLjIxMjA1OC4yNDIwNDYuMjEyMDU4LjIxMjA1OC4yMDk5MTYuMjMxMzM2LjEwMDY3NC4yMDk5MTYuMjA3Nzc0LjIyNzA1Mi4yMTIwNTguMjQyMDQ2LjIxMjA1OC4yMTIwNTguMjA5OTE2LjIzMTMzNi4yMDk5MTYuMjA3Nzc0LjIyNzA1Mi4yMTIwNTguMjEyMDU4Ljk4NTMyLjIzOTkwNC4yMzU2MjAuMjIwNjI2LjEyNDIzNi4xMjQyMzYuMjY1NjA4LjEyNDIzNi4xMjQyMzYuMTA3MTAwLjEwMjgxNi4xMDQ5NTguMTEzNTI2LjQ5MDUxOC4zOTYyNzAuMzg1NTYwLjEwNDk1OC4xMDQ5NTguNDkyNjYwLjMzNDE1Mi4yOTEzMTIuMTA3MTAwLjExNzgxMC40OTI2NjAuMzIzNDQyLjM1MzQzMC40OTI2NjAuMzkxOTg2LjMyNTU4NC40OTQ4MDIuMzE3MDE2LjM4NzcwMi40OTA1MTguNDA0ODM4LjM3OTEzNC40OTQ4MDIuMzUzNDMwLjM1OTg1Ni40OTI2NjAuMjkxMzEyLjQwOTEyMi40OTQ4MDIuNDAwNTU0LjM0MDU3OC40OTY5NDQuMzcyNzA4LjM0NDg2Mi4xMjQyMzYuMTI0MjM2LjI2NTYwOC4xMjQyMzYuMTI0MjM2LjIwOTkxNi4yMzc3NjIuMjU3MDQwLjIzNzc2Mi4yMTg0ODQuMjE4NDg0LjIyNDkxMC4yMTIwNTguMjE2MzQyLjEwMDY3NC4yNDg0NzIuMjM5OTA0LjIyNDkxMC4yMDc3NzQuMjM3NzYyLjA=">数据截图</a></td> </tr>
+</tbody>
+</table>
+</div></div>  </div>
+</div>
+
+<div class="front_block front_block_focus row">
+  <div class="col-md-12">
+    <div id="front_block_top">
+      <ul class="nav nav-tabs">
+        <li class="active">
+        <a href="#front_block_top_current" data-toggle="tab">实时</a>
+        </li>
+        <li>
+        <a href="#front_block_top_day" data-toggle="tab">热映</a>
+        </li>
+        <li>
+        <a href="#front_block_top_year" data-toggle="tab">今年</a>
+        </li>
+        <li>
+        <a href="#front_block_top_all" data-toggle="tab">历史</a>
+        </li>
+        <li class="mavbar-right dropdown">
+        <a title="电影票房排行榜" href="/alltime" id="front_block_top_dropmenu" class="dropdown-toggle" data-toggle="dropdown">
+          <strong>排行榜</strong><b class="caret"></b>
+        </a>
+        <ul role="menu" aria-labelledby="front_block_top_dropmenu" class="dropdown-menu">
+<!--
+          <li>
+          <a title="最新电影票房" target="_blank" href="/daily">最新电影票房排行</a>
+          </li>
+-->
+          <li>
+          <a title="中国电影票房排行榜" target="_blank" href="/alltime">全部电影票房排行</a>
+          </li>
+        </ul>
+        </li>
+      </ul>        
+
+      <div class="tab-content">
+<div id="front_block_top_day" class="tab-pane"><div class="table-responsive"><table class="center_table table table-bordered table-condensed">
+<thead><tr><th>电影名称</th><th>票房</th><th>累积</th></tr></thead><tbody>
+ <tr class="odd"><td class="left"><a href="/film/5040" title="火星救援">火星救援</a></td><td data-toggle="tooltip" title="更新时间：2015/11/27 15:31:32">3555万</td><td>9133万</td> </tr>
+ <tr class="even"><td class="left"><a href="/film/5084" title="我的少女时代">我的少女时代</a></td><td data-toggle="tooltip" title="更新时间：2015/11/27 15:31:49">1530万</td><td>1.75亿</td> </tr>
+ <tr class="odd"><td class="left"><a href="/film/5066" title="玩命速递：重启之战">玩命速递：重启之战</a></td><td data-toggle="tooltip" title="更新时间：2015/11/27 15:32:15">476万</td><td>1.01亿</td> </tr>
+ <tr class="even"><td class="left"><a href="/film/5031" title="007：幽灵党">007：幽灵党</a></td><td data-toggle="tooltip" title="更新时间：2015/11/27 15:32:48">326万</td><td>5.18亿</td> </tr>
+ <tr class="odd"><td class="left"><a href="/film/3986" title="饥饿游戏3：嘲笑鸟（下）">饥饿游戏3：嘲笑鸟（下）</a></td><td data-toggle="tooltip" title="更新时间：2015/11/27 15:32:32">292万</td><td>1.26亿</td> </tr>
+</tbody>
+</table>
+</div></div><div id="front_block_top_year" class="tab-pane"><div class="table-responsive"><table class="center_table table table-bordered table-condensed">
+<thead><tr><th>电影名称</th><th>票房</th></tr></thead><tbody>
+ <tr class="odd"><td class="left"><a href="/film/4194" title="捉妖记">捉妖记</a></td><td data-toggle="tooltip" title="更新时间：2015/09/17 18:26:46">24.38亿</td> </tr>
+ <tr class="even"><td class="left"><a href="/film/4043" title="速度与激情7">速度与激情7</a></td><td data-toggle="tooltip" title="更新时间：2015/09/09 09:58:02">24.26亿</td> </tr>
+ <tr class="odd"><td class="left"><a href="/film/4596" title="港囧">港囧</a></td><td data-toggle="tooltip" title="更新时间：2015/11/02 17:01:01">16.2亿</td> </tr>
+ <tr class="even"><td class="left"><a href="/film/3991" title="复仇者联盟2：奥创纪元">复仇者联盟2：奥创纪元</a></td><td data-toggle="tooltip" title="更新时间：2015/06/12 15:01:41">14.65亿</td> </tr>
+ <tr class="odd"><td class="left"><a href="/film/4669" title="夏洛特烦恼">夏洛特烦恼</a></td><td data-toggle="tooltip" title="更新时间：2015/11/16 14:47:42">14.39亿</td> </tr>
+</tbody>
+</table>
+</div></div><div id="front_block_top_all" class="tab-pane"><div class="table-responsive"><table class="center_table table table-bordered table-condensed">
+<thead><tr><th>电影名称</th><th>票房</th></tr></thead><tbody>
+ <tr class="odd"><td class="left"><a href="/film/4194" title="捉妖记">捉妖记</a></td><td data-toggle="tooltip" title="更新时间：2015/09/17 18:26:46">24.38亿</td> </tr>
+ <tr class="even"><td class="left"><a href="/film/4043" title="速度与激情7">速度与激情7</a></td><td data-toggle="tooltip" title="更新时间：2015/09/09 09:58:02">24.26亿</td> </tr>
+ <tr class="odd"><td class="left"><a href="/film/3311" title="变形金刚4：绝迹重生">变形金刚4：绝迹重生</a></td><td data-toggle="tooltip" title="更新时间：2014/09/11 10:04:32">19.79亿</td> </tr>
+ <tr class="even"><td class="left"><a href="/film/4596" title="港囧">港囧</a></td><td data-toggle="tooltip" title="更新时间：2015/11/02 17:01:01">16.2亿</td> </tr>
+ <tr class="odd"><td class="left"><a href="/film/3991" title="复仇者联盟2：奥创纪元">复仇者联盟2：奥创纪元</a></td><td data-toggle="tooltip" title="更新时间：2015/06/12 15:01:41">14.65亿</td> </tr>
+</tbody>
+</table>
+</div></div><div id="front_block_top_current" class="tab-pane active"><div class="table-responsive"><table class="center_table table table-bordered table-condensed">
+<thead><tr><th>电影名称</th><th>票房</th></tr></thead><tbody>
+ <tr class="odd"><td class="left"><a href="/film/5040" title="火星救援">火星救援</a></td><td data-toggle="tooltip" title="更新时间：2015/11/27 20:55:14">5607.03万</td> </tr>
+ <tr class="even"><td class="left"><a href="/film/5012" title="消失的凶手">消失的凶手</a></td><td data-toggle="tooltip" title="更新时间：2015/11/27 20:55:14">3208.92万</td> </tr>
+ <tr class="odd"><td class="left"><a href="/film/5084" title="我的少女时代">我的少女时代</a></td><td data-toggle="tooltip" title="更新时间：2015/11/27 20:55:13">2041.42万</td> </tr>
+ <tr class="even"><td class="left"><a href="/film/4925" title="坏蛋必须死">坏蛋必须死</a></td><td data-toggle="tooltip" title="更新时间：2015/11/27 20:55:13">968.58万</td> </tr>
+ <tr class="odd"><td class="left"><a href="/film/5066" title="玩命速递：重启之战">玩命速递：重启之战</a></td><td data-toggle="tooltip" title="更新时间：2015/11/27 20:55:13">528.38万</td> </tr>
+</tbody>
+</table>
+</div></div><div id="front_block_top_total" class="tab-pane"><div class="table-responsive"><table class="center_table table table-bordered table-condensed">
+<thead><tr><th>电影名称</th><th>票房</th></tr></thead><tbody>
+ <tr class="odd"><td class="left"><a href="/film/"></a></td><td data-toggle="tooltip" title="更新时间：1970/01/01 08:00:00">--</td> </tr>
+ <tr class="even"><td class="left"><a href="/film/"></a></td><td data-toggle="tooltip" title="更新时间：1970/01/01 08:00:00">--</td> </tr>
+ <tr class="odd"><td class="left"><a href="/film/"></a></td><td data-toggle="tooltip" title="更新时间：1970/01/01 08:00:00">--</td> </tr>
+ <tr class="even"><td class="left"><a href="/film/"></a></td><td data-toggle="tooltip" title="更新时间：1970/01/01 08:00:00">--</td> </tr>
+ <tr class="odd"><td class="left"><a href="/film/"></a></td><td data-toggle="tooltip" title="更新时间：1970/01/01 08:00:00">--</td> </tr>
+</tbody>
+</table>
+</div></div>      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div id="front_block_schedule">
+      <ul class="nav nav-tabs">
+        <li>
+        <a href="/schedule/date/20151126" title="昨天全国电影排片">昨天</a>
+        </li>
+        <li class="active">
+        <a href="/schedule" title="全国电影排片">今天</a>
+        </li>
+        <li>
+        <a href="/schedule/date/20151128" title="明天全国电影排片">明天</a>
+        </li>
+        <li>
+<a target="_blank" title="2015年11月27日全国电影排片统计" alt="2015年11月27日全国电影排片统计" href="/share?code=MTEzNTI2LjIxNjM0Mi4xMDI4MTYuMTA3MTAwLjExMTM4NC4yMDc3NzQuMTE5OTUyLjExMTM4NC4yMzM0NzguMjE4NDg0LjEwMDY3NC4yNDYzMzAuMjEyMDU4LjIyMjc2OC4yMTYzNDIuMjE0MjAwLjI1MDYxNC4yMzEzMzYuMjE2MzQyLjEwMDY3NC4yMDk5MTYuMjA3Nzc0LjIyNzA1Mi4yMTIwNTguMjQyMDQ2LjIxMjA1OC4yMTIwNTguMjA5OTE2LjIzMTMzNi4xMDA2NzQuMjA5OTE2LjIwNzc3NC4yMjcwNTIuMjEyMDU4LjI0MjA0Ni4yMTIwNTguMjEyMDU4LjIwOTkxNi4yMzEzMzYuMjA5OTE2LjIwNzc3NC4yMjcwNTIuMjEyMDU4LjIxMjA1OC45ODUzMi4yMzk5MDQuMjM1NjIwLjIyMDYyNi4xMjQyMzYuMTI0MjM2LjI2NTYwOC4xMjQyMzYuMTI0MjM2LjEwNzEwMC4xMDI4MTYuMTA0OTU4LjExMzUyNi40OTA1MTguMzk2MjcwLjM4NTU2MC4xMDQ5NTguMTA0OTU4LjQ5MjY2MC4zMzQxNTIuMjkxMzEyLjEwNzEwMC4xMTc4MTAuNDkyNjYwLjMyMzQ0Mi4zNTM0MzAuNDkwNTE4LjI4NDg4Ni4zNTk4NTYuNDkwNTE4LjMzMjAxMC40MDQ4MzguNDk0ODAyLjMxNzAxNi4zODc3MDIuNDkwNTE4LjQwNDgzOC4zNzkxMzQuNDkyNjYwLjMwNDE2NC4zMTI3MzIuNDk0ODAyLjI5MzQ1NC4yODkxNzAuNDk0ODAyLjQwMDU1NC4zNDA1NzguNDk2OTQ0LjM3MjcwOC4zNDQ4NjIuMTI0MjM2LjEyNDIzNi4yNjU2MDguMTI0MjM2LjEyNDIzNi4yNDYzMzAuMjEyMDU4LjIyMjc2OC4yMTYzNDIuMjE0MjAwLjI1MDYxNC4yMzEzMzYuMjQ4NDcyLjEwMDY3NC4yMTQyMDAuMjA3Nzc0LjI0ODQ3Mi4yMTYzNDIuMTAwNjc0LjEwNzEwMC4xMDI4MTYuMTA0OTU4LjExMzUyNi4xMDQ5NTguMTA0OTU4LjEwNzEwMC4xMTc4MTAuMA==">分享</a>        </li>
+        <li class="mavbar-right dropdown">
+        <a title="全国电影排片统计" href="/schedule" id="front_block_schedule_dropmenu" class="dropdown-toggle" data-toggle="dropdown">
+          <strong>全国排片</strong><b class="caret"></b>
+        </a>
+        <ul role="menu" aria-labelledby="front_block_schedule_dropmenu" class="dropdown-menu">
+          <li>
+          <a title="热门电影分时场次统计" target="_blank" href="/schedule/hour">热门电影分时场次</a>
+          </li>
+          <li>
+          <a title="全国电影排片明细" target="_blank" href="/schedule">全国电影排片明细</a>
+          </li>
+        </ul>
+        </li>
+      </ul>        
+
+
+      <div class="tab-content">
+<div class="table-responsive"><table class="center_table table table-bordered table-condensed">
+<thead><tr><th>名称</th><th>总排片</th><th>网票</th><th>哈票</th><th>万达</th><th>淘票</th></tr></thead><tbody>
+ <tr class="odd"><td><a href="/film/5040" title="火星救援">火星</a></td><td>4.36万/30.1%</td><td>22260</td><td>2965</td><td>3622</td><td>35361</td> </tr>
+ <tr class="even"><td><a href="/film/5012" title="消失的凶手">消失</a></td><td>2.25万/15.5%</td><td>11740</td><td>1494</td><td>862</td><td>18127</td> </tr>
+ <tr class="odd"><td><a href="/film/5084" title="我的少女时代">我的</a></td><td>2.17万/15%</td><td>11320</td><td>1732</td><td>1738</td><td>17772</td> </tr>
+ <tr class="even"><td><a href="/film/4925" title="坏蛋必须死">坏蛋</a></td><td>2.01万/13.9%</td><td>9436</td><td>944</td><td>1513</td><td>15552</td> </tr>
+ <tr class="odd"><td><a href="/film/5066" title="玩命速递：重启之战">玩命</a></td><td>1.13万/7.8%</td><td>4712</td><td>578</td><td>1297</td><td>8056</td> </tr>
+</tbody>
+</table>
+</div>      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+        <div id="sidebar-right" class="sidebar col-md-5 last">
+      
+<div class="block block_module_film_block" id="block_film_block_wait_play">
+      <h3 class="block_title">即将上映</h3>
+    <div class="block_content">
+    <div class="item-list item_node_item_list"><ul class="node_item_list"><li class="first"><a href="http://58921.com/film/4842" title="电影 怦然星动 上映日期">怦然星动</a>(15/12/03)</li>
+<li><a href="http://58921.com/film/4598" title="电影 天亮之前 上映日期">天亮之前</a>(15/12/04)</li>
+<li><a href="http://58921.com/film/4881" title="电影 从天“儿”降 上映日期">从天“儿”降</a>(15/12/04)</li>
+<li><a href="http://58921.com/film/4848" title="电影 一切都好 上映日期">一切都好</a>(15/12/04)</li>
+<li><a href="http://58921.com/film/5038" title="电影 不可思异 上映日期">不可思异</a>(15/12/04)</li>
+<li><a href="http://58921.com/film/4484" title="电影 极盗者 上映日期">极盗者</a>(15/12/04)</li>
+<li class="last"><a href="http://58921.com/film/coming" title="更多">更多</a></li>
+</ul>
+</div>
+  </div>
+</div>
+
+    </div>
+      </div>
+</div>
+
+<div class="clearfix front_block text-center">
+
+</div>
+
+<div id="footer">
+  <div class="container">
+    <script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe71d0b417f75981e161a94970becbb1b' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<p>
+<a href="http://58921.com/schedule" title="全国电影排片">全国电影排片</a> | 
+<a href="http://58921.com/daily/wangpiao" title="网票排行榜">网票排行榜</a> | 
+<a href="http://58921.com/alltime" title="票房排行榜">票房排行榜</a> | 
+<a href="http://58921.com/boxoffice/hipiao" title="哈票统计">哈票统计</a> | <a href="http://58921.com/boxoffice/wangpiao" title="网票统计">网票统计</a> | <a href="http://58921.com/boxoffice/wanda" title="万达票房统计">万达票房统计</a> | <a href="http://58921.com/alltime" title="票房排行榜">票房排行榜</a> | 
+<a href="/links" title="电影票房数据库友情链接">友情链接</a>
+</p>
+<p>
+<a href="http://pp.58921.com/" title="全国电影排片数据库">排片数据库</a> | 
+<a href="/group/boxoffice" title="电影票房话题">电影话题</a> | 
+<a href="/group/manage" title="电影票房数据库站务专区">站务专区</a>
+| 
+<a href="/film/new" title="正在上映电影">正在上映电影</a>
+| 
+<a href="/film/coming" title="即将上映电影">即将上映电影</a>
+|
+<a href="/group/node/2336" title="激活帐号" style="color:#f00;">帐号无法激活？</a>
+</p>
+<p>联系邮箱：service@didaio.com QQ：851888668(广告投放)，849401896(数据合作)</p>
+<p>京ICP备12038111号</p>
+
+          </div>
+</div>
+
+
+
+</body>
+</html>

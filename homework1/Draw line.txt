@@ -1,0 +1,6 @@
+	CPen myPen1;
+	myPen1.CreatePen(PS_SOLID, 1, RGB(255, 0, 0));
+	CPen *pOldPen = pDC->SelectObject(&myPen1);
+
+	pDC->MoveTo(100, 50);
+	pDC->LineTo(400, 300);

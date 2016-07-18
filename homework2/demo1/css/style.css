@@ -1,0 +1,42 @@
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font: 10px sans-serif;
+}
+
+.axis .grid-line{
+    stroke: black;
+    shape-rendering: crispEdges;
+    stroke-opacity: .2;
+}
+
+.bubble{
+    fill-opacity: .5;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+div.tooltip {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    font: 12px sans-serif;
+    text-align: center;
+    background-color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
